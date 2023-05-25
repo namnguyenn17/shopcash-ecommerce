@@ -1,9 +1,10 @@
-import nextConnect from 'next-connect'
-import bcrypt from 'bcrypt'
-import db from '@/utils/db'
-import { validateEmail } from '@/utils/validation'
-import { createActivationToken } from '@/utils/token'
 import User from '@/models/User'
+import db from '@/utils/db'
+import { sendEmail } from '@/utils/sendEmail'
+import { createActivationToken } from '@/utils/token'
+import { validateEmail } from '@/utils/validation'
+import bcrypt from 'bcrypt'
+import nextConnect from 'next-connect'
 
 const handler = nextConnect()
 
@@ -35,7 +36,11 @@ handler.post(async (req, res) => {
     })
 
     const url = `${process.env.BASE_URL}/activate/${activation_token}`
-    res.send(url)
+    sendEmail(email, url, '', 'Activate your account.')
+    await db.disconnectDb()
+    res.json({
+      message: 'Register success! Please activate your email to start',
+    })
   } catch (error) {
     res.status(500).json({ message: error.message })
   }
