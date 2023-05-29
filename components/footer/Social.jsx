@@ -1,5 +1,5 @@
 import React from 'react'
-import styles from './style.module.scss'
+import styles from './styles.module.scss'
 import { FaFacebookF, FaTiktok } from 'react-icons/fa'
 import {
   BsInstagram,

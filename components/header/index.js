@@ -1,5 +1,5 @@
 import React from 'react'
-import styles from './style.module.scss'
+import styles from './styles.module.scss'
 import Ad from './Ad.jsx'
 import Top from './Top.jsx'
 import Main from './Main.jsx'

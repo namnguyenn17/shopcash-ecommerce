@@ -1,5 +1,5 @@
 import React from 'react'
-import styles from './style.module.scss'
+import styles from './styles.module.scss'
 export default function Payment() {
   return (
     <div className={styles.footer__payment}>
