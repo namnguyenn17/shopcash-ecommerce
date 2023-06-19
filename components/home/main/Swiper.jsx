@@ -8,6 +8,7 @@ import 'swiper/css/pagination'
 import 'swiper/css/navigation'
 
 // import required modules
+import styles from './styles.module.scss'
 import { Autoplay, Pagination, Navigation } from 'swiper'
 
 export default function MainSwiper() {
