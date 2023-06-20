@@ -3,6 +3,7 @@ import styles from './styles.module.scss'
 import MainSwiper from './Swiper'
 import Offers from './Offers'
 import Menu from './Menu'
+import User from './User'
 
 export default function index() {
   return (
@@ -11,7 +12,7 @@ export default function index() {
       <Menu />
       <MainSwiper />
       <Offers />
-      <div className={styles.user}>User</div>
+      <User />
     </div>
   )
 }
