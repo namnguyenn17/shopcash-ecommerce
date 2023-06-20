@@ -13,6 +13,48 @@
     background: #fff;
     border-radius: 10px;
     box-shadow: $box-shadow;
+
+    &__header {
+      width: 100%;
+      height: 35px;
+      background: $grey-color;
+      border-bottom: 1px solid $grey-color;
+      box-shadow: $box-shadow-2;
+      svg {
+        height: 23px;
+        width: 23px;
+      }
+    }
+
+    &__list {
+      margin-top: 3px;
+    }
+    ul {
+      li {
+        height: 32px;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        border-bottom: 1px solid $grey-color;
+        &:hover {
+          background: $grey-color;
+          cursor: pointer;
+        }
+        a {
+          padding: 0 10px;
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          color: #424141;
+          svg {
+            height: 20px;
+            width: 20px;
+            fill: #8c8484;
+            stroke: #8c8484;
+          }
+        }
+      }
+    }
   }
 
   .header {
