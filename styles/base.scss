@@ -256,4 +256,18 @@ $box-shadow-2: rgba(99, 99, 99, 0.1) 0px 0px 4px 0px;
     }
   }
 }
+
+.flashDeals__swiper {
+  .swiper-slide {
+    img {
+      border-radius: 0 !important;
+      height: 320px !important;
+    }
+  }
+
+  .swiper-button-prev,
+  .swiper-button-next {
+    top: 35%;
+  }
+}
 // -------------- SWIPER ----------------

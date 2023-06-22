@@ -28,16 +28,16 @@ export default function FlashDeals() {
       </div>
 
       <Swiper
-        slidesPerView={3}
-        spaceBetween={30}
+        slidesPerView={5}
+        spaceBetween={20}
         navigation={true}
         modules={[Navigation]}
         className="flashDeals__swiper"
       >
         <div className={styles.flashDeals__list}>
-          {flashDealsArray.map((item, index) => (
+          {flashDealsArray.map((product, index) => (
             <SwiperSlide key={index}>
-              <FlashCard product={item} />
+              <FlashCard product={product} />
             </SwiperSlide>
           ))}
         </div>
