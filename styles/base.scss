@@ -269,5 +269,13 @@ $box-shadow-2: rgba(99, 99, 99, 0.1) 0px 0px 4px 0px;
   .swiper-button-next {
     top: 35%;
   }
+
+  @media (max-width: 450px) {
+    .swiper-button-prev,
+    .swiper-button-next {
+      display: grid;
+    }
+  }
 }
+
 // -------------- SWIPER ----------------

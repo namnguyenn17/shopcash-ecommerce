@@ -28,11 +28,25 @@ export default function FlashDeals() {
       </div>
 
       <Swiper
-        slidesPerView={5}
-        spaceBetween={20}
+        slidesPerView={1}
+        spaceBetween={10}
         navigation={true}
         modules={[Navigation]}
         className="flashDeals__swiper"
+        breakpoints={{
+          450: {
+            slidesPerView: 2,
+          },
+          630: {
+            slidesPerView: 3,
+          },
+          920: {
+            slidesPerView: 4,
+          },
+          1232: {
+            slidesPerView: 5,
+          },
+        }}
       >
         <div className={styles.flashDeals__list}>
           {flashDealsArray.map((product, index) => (
