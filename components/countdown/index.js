@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import styles from './styles.module.scss'
 import { calculateRemainingTime } from './utils'
 
@@ -17,7 +17,6 @@ export default function CountDown({ date }) {
   }, [date])
 
   const [remainingTime, setRemainingTime] = useState()
-  console.log('remainingTime', remainingTime)
 
   useEffect(() => {
     const interval = setInterval(() => {
