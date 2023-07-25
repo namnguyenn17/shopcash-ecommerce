@@ -7,8 +7,16 @@ import Main from '@/components/home/main'
 import { useSession, signIn, signOut } from 'next-auth/react'
 import FlashDeals from '@/components/home/flashDeals'
 import Category from '@/components/home/category'
-import { women_dresses, women_shoes, women_accessories } from '@/data/home'
+import {
+  women_dresses,
+  women_shoes,
+  women_accessories,
+  women_swiper,
+  gamingSwiper,
+  homeImprovSwiper,
+} from '@/data/home'
 import { useMediaQuery } from 'react-responsive'
+import ProductsSwiper from '@/components/productsSwiper'
 
 export default function Home({ country }) {
   const { data: session } = useSession()
@@ -48,6 +56,17 @@ export default function Home({ country }) {
               background="#6cc070"
             />
           </div>
+          <ProductsSwiper products={women_swiper} />
+          <ProductsSwiper
+            products={gamingSwiper}
+            header="For Gamers"
+            bg="#2f82ff"
+          />
+          <ProductsSwiper
+            products={homeImprovSwiper}
+            header="Home Improvements"
+            bg="#ff2f2f"
+          />
         </div>
       </div>
       <Footer country={country} />
